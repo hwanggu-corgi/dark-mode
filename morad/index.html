@@ -1,50 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
+<style>
+/*!
+ |-----------------------------------------------------------------------------------------
+ |
+ |
+ | Image Left Content Rihgt - Start
+ |
+ |
+ |-----------------------------------------------------------------------------------------
+*/
+.layoutWithCurveIMH.imgLeftContentRight .container {
+	max-width: 100%;
+	padding: 0;
+}
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-</head>
-<body>
-    <h2>Desktop Menu</h2>
-    <h3>Desktop Menu 1</h3>
-    <iframe src="src/desktop_menus/desktop_menu_1.html" width="100%" height="400px"></iframe>
-
-    <h2>Mobile Menu Button</h2>
-    <h3>Menu 1</h3>
-    <iframe src="src/menu_buttons/button_1.html" width="100%"></iframe>
-    <h3>Menu 2</h3>
-    <iframe src="src/menu_buttons/button_2.html" width="100%"></iframe>
-
-    <h2>Mobile Menu</h2>
-    <h3>Mobile Menu 1</h3>
-    <iframe src="src/mobile_menus/mobile_menu_1.html" width="100%" height="400px"></iframe>
-    <h3>Mobile Menu 2</h3>
-    <iframe src="src/mobile_menus/mobile_menu_2.html" width="100%" height="400px"></iframe>
-
-    <h2>Image Cards</h2>
-    <h3>Image Card 1</h3>
-    <iframe src="src/image_cards/image_card_1.html" width="100%"></iframe>
-    <h3>Image Card 2</h3>
-    <iframe src="src/image_cards/image_card_2.html" width="100%" height="500px"></iframe>
-
-    <h2>Button</h2>
-    <h3>Button 1</h3>
-    <iframe src="src/buttons/button_1.html" width="100%"></iframe>
-    <h3>Button 2</h3>
-    <iframe src="src/buttons/button_2.html" width="100%"></iframe>
-
-    <h2>Number Counter</h2>
-    <h3>Number Counter 1</h3>
-    <iframe src="src/number_counters/number_counter_1.html" width="100%"></iframe>
-    <h3>Number Counter 2</h3>
-    <iframe src="src/number_counters/number_counter_2.html" width="100%"></iframe>
-
-
-    <h2>Scroll Below Animation</h2>
-    <h3>Scroll Below Animation 1</h3>
-    <iframe src="src/scroll_below_animations/scroll_below_animation_1.html" width="100%"></iframe>
-</body>
-
-</html>
+.layoutWithCurveIMH.imgLeftContentRight .twoCol {
+	padding: 0 calc((100% - 1140px)/2) 0 0;
+}
+/*!
+ |-----------------------------------------------------------------------------------------
+ |
+ |
+ | Image Left Content Rihgt - End
+ |
+ |
+ |-----------------------------------------------------------------------------------------
+*/
+</style>
+<div class="layoutWithCurveIMH contentAreaTall fullWidth _bg-lightest imgLeftContentRight content-style">
+	<img class="bannerCurve" src="/images/bannerCurveGrey.svg" alt="Banner Curve"/>
+	<div class="contentAreaWrap">
+		<div class="container">
+			<div class="twoCol vcentered colGap110">
+				<div class="column">
+					<mwPageArea rel="column1" info="Column 1" sortable="page"></mwPageArea>
+				</div>
+				<div class="column">
+					<mwPageArea rel="column2" info="Column 2" sortable="page"></mwPageArea>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
