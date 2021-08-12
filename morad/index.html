@@ -1,8 +1,16 @@
 <style>
+    .layoutDocterImageIMH {
+        background-image: url('/images/doctor-background-image.png');
+    }
+
     .layoutDocterImageIMH .containerWrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: ". main";
+    }
+
+    .layoutDocterImageIMH .containerWrapper > div {
+        grid-area: main;
     }
 </style>
 <div class="contentAreaTall content-style _bg-white layoutDocterImageIMH">
