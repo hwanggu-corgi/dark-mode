@@ -27,6 +27,7 @@
 	max-width: 1460px;
 	display: flex;
 	box-sizing: content-box;
+	margin: 0 auto;
 }
 
 
@@ -358,6 +359,7 @@
 	padding: 0 20px;
 	max-width: 1460px;
 	box-sizing: content-box;
+	margin: 0 auto;
 }
 
 
@@ -386,7 +388,7 @@
 
 .headerImh .mobileNavigationMenuHeader .burger:hover .burgerLine,
 .headerImh .mobileNavigationMenuHeader .burger:hover .burgerSlash {
-  background-color: var(--color-white);
+  background-color: var(--color-secondary);
 }
 
 .headerImh .mobileNavigationMenuHeader {
@@ -417,6 +419,38 @@
   }
 }
 
+.headerImh.onScroll .mobileNavigationMenuHeader {
+  height: 83px;
+}
+
+@media screen and (min-width: 991px) {
+  .headerImh.onScroll .mobileNavigationMenuHeader {
+    height: 100px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .headerImh.onScroll .mobileNavigationMenuHeader {
+    height: 125px;
+  }
+}
+
+.headerImh .mobileNavigationMenuContent .mainMenu a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.headerImh .mobileNavigationMenuContent .mainMenu a:hover {
+  color: var(--color-secondary);
+}
+
+.headerImh .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li {
+  padding: 0 0 5px 0;
+}
+
+.headerImh .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li > a {
+  font-size: 32px;
+}
 </style>
 <div class="headerImh">
 	<section class="desktopNavigationMenu">
