@@ -156,6 +156,13 @@
  |
  |-----------------------------------------------------------------------------------------
 */
+@media screen and (min-width: 1200px) {
+	.galleryLocationsIMH .container {
+		padding: 0;
+		max-width: 100%;
+	}
+}
+
 .galleryLocationsIMH .galleryWrap {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
@@ -171,7 +178,6 @@
 @media screen and (min-width: 1200px) {
 	.galleryLocationsIMH .galleryWrap {
 		grid-template-columns: repeat(4, 1fr);
-		padding: 0;
 	}	
 }
 
@@ -249,18 +255,20 @@
 */
 </style>
 <div class="galleryLocationsIMH content-style">
-	<div class="galleryWrap">
-		<items thumb="768x0" preview="768x0">
-			<div class="galleryItem">
-				<div class="galleryItemWrap" >
-					<div class="galleryImg" role="img" aria-label="{title}" style="background-image: url('{preview_url}')"></div>
-					<div class="galleryContent">
-						<h6>{title}</h6>
-						{description}
-						<p><a href="{preview_url}" title="{title}">View Info</a></p>
+	<div class="container">
+		<div class="galleryWrap">
+			<items thumb="768x0" preview="768x0">
+				<div class="galleryItem">
+					<div class="galleryItemWrap" >
+						<div class="galleryImg" role="img" aria-label="{title}" style="background-image: url('{preview_url}')"></div>
+						<div class="galleryContent">
+							<h6>{title}</h6>
+							{description}
+							<p><a href="{preview_url}" title="{title}">View Info</a></p>
+						</div>
 					</div>
 				</div>
-			</div>
-		</items>
+			</items>
+		</div>
 	</div>
 </div>
