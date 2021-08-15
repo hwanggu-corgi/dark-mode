@@ -3,277 +3,896 @@
  |-----------------------------------------------------------------------------------------
  |
  |
- | Footer Imh - Start
+ | Header Imh - Start
  |
  |
  |-----------------------------------------------------------------------------------------
 */
-.footerImh {
-	padding: 110px 0;
+.headerArea > div {
+	min-height: 0 !important;
+}
+
+.headerArea .desktopNavigationMenu {
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+
+.headerImh {
+	position: relative;
+}
+
+.headerImh.onScroll .desktopNavigationMenu {
+	background-color: var(--color-white);
+	box-shadow: 0 10px 30px rgb(0 0 0 / 8%);
+}
+
+.headerImh .desktopNavigationMenu::before {
+	content: "";
+	height: 8px;
+	display: block;
 	background-color: var(--color-primary);
 	color: var(--color-white);
 }
 
-.footerImh a {
-	color: var(--color-white);
+.headerImh .desktopNavigationMenu .headerWrap {
+	padding: 0 20px;
+	max-width: 1460px;
+	display: flex;
+	box-sizing: content-box;
+	margin: 0 auto;
 }
 
-.footerImh .footerImhWrap {
-	display: grid;
-	column-gap: 60px;
-	row-gap: 30px;
-}
 
-@media screen and (min-width: 767px) {
-	.footerImh .footerImhWrap {
-		grid-template-columns: repeat(2, 1fr);
+@media screen and (min-width: 991px) {
+	.headerImh .desktopNavigationMenu .headerWrap {
+		padding: 0 40px;
 	}
 }
 
-@media screen and (min-width: 1200px) {
-	.footerImh .footerImhWrap {
-		grid-template-columns: repeat(4, 1fr);
+
+@media screen and (min-width: 1300px) {
+	.headerImh .desktopNavigationMenu .headerWrap {
+		padding: 0 60px;
 	}
 }
 
-.footerImh .column:not(:first-child)::before {
-	content: "";
-	display: block;
-	height: 1px;
-	width: 100%;
-	background-color: var(--color-primary-x-lightened);
-	margin: 0 0 21px 0;
+.headerImh .desktopNavigationMenu .headerImhLogo a {
+	display: flex;
+	position: relative;
+	background-color: var(--color-primary);
+	width: calc(290px/1.7);
+	height: calc(150px/1.7);
+	padding: 20px;
+	transition: var(--transition);
 }
 
-.footerImh section {
-	margin: 0 0 30px 0;
+@media screen and (min-width: 991px) {
+	.headerImh .desktopNavigationMenu .headerImhLogo a {
+		width: calc(290px/1.3);
+		height: calc(150px/1.3);
+		padding: 30px;
+	}
 }
 
-.footerImh section:last-child {
-	margin: 0;
+@media screen and (min-width: 1300px) {
+	.headerImh .desktopNavigationMenu .headerImhLogo a {
+		width: 290px;
+		height: 150px;
+		padding: 40px 30px;
+	}
 }
 
-.footerImh .Content .blockContents *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-	font-size: var(--font-size-small);
-	font-family: var(--font-secondary);
-}
-
-.footerImh .footerMenu a {
-	font-family: var(--font-secondary);
-	display: block;
-}
-
-.footerImh .primaryMenu li {
-	margin: 0 0 15px 0;
-}
-
-.footerImh .primaryMenu li:last-child {
-	margin: 0;
-}
-
-
-.footerImh .primaryMenu a {
-	font-weight: normal;
-}
-
-.footerImh .primaryMenu a:hover {
-	font-weight: bold;
-}
-
-.footerImh .secondaryMenu li::after {
-	content: "";
-	display: block;
-	height: 1px;
-	width: 100%;
-	background-color: var(--color-primary-x-lightened);
-}
-
-.footerImh .secondaryMenu li:last-child::after {
-	content: none;
-}
-
-.footerImh .secondaryMenu li:first-child a {
-	padding: 0 0 18px 0;
-}
-
-.footerImh .secondaryMenu a {
-	padding: 20px 0 18px 0;
-}
-
-.footerImh .secondaryMenu a:hover {
-	color: var(--color-secondary);
-}
-
-.footerImh .secondaryMenu a * {
-	transition: none;
-}
-
-/*NEWSLETTER*/
-.footerImh .Dialog {
-	width: 100%;
-}
-
-.footerImh .Dialog .Caption {
-	margin: 0 0 15px 0;
-}
-
-.footerImh .mwInput.checkbox {
+.headerImh.onScroll .desktopNavigationMenu .headerImhLogo a {
 	background-color: transparent;
-	color: white;
+	width: calc(290px/1.8);
+	height: calc(150px/1.8);
+	padding: 20px;
+	align-items: center;
 }
 
-.footerImh .mwInput.checkbox:not(:last-child) {
-	margin: 0 0 11px 0;
-}
-
-.footerImh .mwInput.checkbox:last-child {
-	margin: 0 0 15px 0;
-}
-
-.footerImh .mwInput.checkbox div {
-	font-family: var(--font-secondary);
-}
-
-.footerImh .mwInput.text {
-	margin: 0 0 8px 0;
-	border: 1px solid var(--color-white);
-	padding: 0;
-}
-
-.footerImh .mwInput.text input {
-	padding: 10px 16px;
-	line-height: initial;
-	color: var(--color-black);
-}
-
-.footerImh .mwInput.text input::placeholder {
-	color: var(--color-black);
-}
-
-.footerImh .mwInput.text input::placeholder {
-	color: var(--color-black);
-}
-
-.footerImh .btn p > button {
-	padding: 10px 28px;
-	width: 100%;
-}
-
-@media screen and (min-width: 1200px) {
-	.footerImh .btn p > button {
-		width: initial;
+@media screen and (min-width: 991px) {
+	.headerImh.onScroll .desktopNavigationMenu .headerImhLogo a {
+		width: calc(290px/1.5);
+		height: calc(150px/1.5);
+		padding: 25px;
 	}	
 }
 
-/*SOCIALS*/
-.footerImh .footerSocialWrap {
-	display: flex;
-	align-items: center;
+@media screen and (min-width: 1300px) {
+	.headerImh.onScroll .desktopNavigationMenu .headerImhLogo a {
+		width: calc(290px/1.2);
+		height: calc(150px/1.2);
+		padding: 30px;
+	}	
 }
 
-.footerImh .footerSocialTitle {
-	font-size: var(--font-size-medium);
-	font-family: var(--font-secondary);
-	margin: 0 15px 0 0;
-	text-align: center;
-}
-
-@media screen and (min-width: 767px) {
-	.footerImh .footerSocialTitle {
-		text-align: left;
-	}
-}
-
-.footerImh .Gensoclinks {
-	flex-grow: 1;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-}
-
-.footerImh .snsLink {
-	text-align: center;
-}
-
-@media screen and (min-width: 767px) {
-	.footerImh .snsLink {
-		text-align: right;
-	}
-}
-
-.footerImh .footerSocial::before {
-	content: "";
-	display: block;
-	height: 1px;
+.headerImh .desktopNavigationMenu .headerImhLogo img {
 	width: 100%;
-	background-color: var(--color-primary-x-lightened);
-	margin: 0 0 21px 0;
 }
 
-.footerImh .footerSocial a {
-	margin: 0 10px 0 0;
+.headerImh.onScroll .desktopNavigationMenu .logoWhite {
+	display: none;
 }
 
-.footerImh .footerSocial a:hover {
-	color: var(--color-secondary);
+.headerImh .desktopNavigationMenu .logoBlue {
+	display: none;
 }
 
-.footerImh .footerSocial a:last-child {
+.headerImh.onScroll .desktopNavigationMenu .logoBlue {
+	display: block;
+}
+
+.headerImh .desktopNavigationMenu .headerImhMain {
+	display: flex;
+	flex-direction: column;
+  justify-content: center;
+	flex-grow: 1;
+}
+
+@media screen and (min-width: 1300px) {
+	.headerImh .desktopNavigationMenu .headerImhMain {
+		justify-content: flex-end;
+	}
+}
+
+.headerImh .desktopNavigationMenu .headerImhMainSecondaryMenu {
+	display: flex;
+	justify-content: flex-end;
+	margin: 0;
+	transition: var(--transition);
+}
+
+@media screen and (min-width: 1300px) {
+	.headerImh .desktopNavigationMenu .headerImhMainSecondaryMenu {
+		margin: 0 0 30px 0;
+	}
+}
+
+@media screen and (min-width: 1300px) {
+	.headerImh.onScroll .desktopNavigationMenu .headerImhMainSecondaryMenu {
+		margin: 0 0 25px 0;
+	}
+}
+
+/*DESKTOP NAVIGATION UTILITY MENU*/
+.headerImh .desktopNavigationMenu .utilityBarMenu {
+	margin: 0 22px 0 0;
+	display: none;
+}
+
+@media screen and (min-width: 1300px) {
+	.headerImh .desktopNavigationMenu .utilityBarMenu {
+		display: block;
+	}
+}
+
+.headerImh .desktopNavigationMenu .utilityBarMenu .Menu {
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.headerImh .desktopNavigationMenu .utilityBarMenu ul {
+	display: flex;
+}
+
+.headerImh .desktopNavigationMenu .utilityBarMenu li {
+	font-size: var(--font-size-small);
+	font-family: var(--font-secondary);
+	margin: 0 30px 0 0;
+}
+
+.headerImh .desktopNavigationMenu .utilityBarMenu li:last-child {
 	margin: 0;
 }
 
-.footerImh .footerSocial a * {
+.headerImh .desktopNavigationMenu .utilityBarMenu a {
+	color: var(--color-white);
+}
+
+
+.headerImh .desktopNavigationMenu .utilityBarMenu a:hover {
+	color: var(--color-secondary);
+}
+
+.headerImh.onScroll .desktopNavigationMenu .utilityBarMenu a {
+	color: var(--color-primary);
+}
+
+.headerImh.onScroll .desktopNavigationMenu .utilityBarMenu a:hover {
+	color: var(--color-secondary);
+}
+
+.headerImh .desktopNavigationMenu .utilityBarMenu a * {
 	transition: none;
+}
+
+.headerImh.onScroll .desktopNavigationMenu .utilityBarMenu a * {
+	transition: none;
+}
+
+/*DESKTOP NAVIGATION SEARCH BAR*/
+.headerImh .desktopNavigationMenu .headerSearch {
+	display: none;
+  align-items: center;
+  height: 100%;
+	margin: 0 33px 0 0;
+}
+
+@media screen and (min-width: 991px) {
+	.headerImh .desktopNavigationMenu .headerSearch {
+		display: flex;
+	}
+}
+
+.headerImh .desktopNavigationMenu .searchBtn {
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	background-color: var(--color-white);
+	font-size: var(--font-size-x-small);
+	box-shadow: 0 5px 30px rgb(0 0 0 / 20%);
+}
+
+.headerImh .desktopNavigationMenu .searchBtn:hover {
+	background-color: var(--color-secondary);
+	color: var(--color-white);
+}
+
+.headerImh .desktopNavigationMenu .searchBtn * {
+	transition: none;
+}
+
+.headerImh .desktopNavigationMenu .searchBarImh {
+	top: 100%;
+	left: 50%;
+	-webkit-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+}
+
+.headerImh.search-bar-desktop-open .desktopNavigationMenu .searchBarImh {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate(-50%, 30px);
+          transform: translate(-50%, 30px);
+  z-index: 3;
+}
+
+/*DESKTOP NAVIGATION UTILITY MENU CALL TO ACTION BUTTONS*/
+.headerImh .desktopNavigationMenu .headerBtns {
+	display: none;
+	margin: 0 30px 0 0;
+}
+
+@media screen and (min-width: 991px) {
+	.headerImh .desktopNavigationMenu .headerBtns {
+		display: flex;
+	}
+}
+
+
+@media screen and (min-width: 1300px) {
+	.headerImh .desktopNavigationMenu .headerBtns {
+		margin: 0;
+	}
+}
+
+.headerImh .desktopNavigationMenu .headerMobileMenu {
+	display: flex;
+	align-items: center;
+}
+
+.headerImh .desktopNavigationMenu .headerMobileMenu .burgerLine,
+.headerImh .desktopNavigationMenu .headerMobileMenu .burgerSlash {
+	background-color: var(--color-white);
+}
+
+.headerImh .desktopNavigationMenu .headerMobileMenu .burgerText {
+	color: var(--color-white);
+}
+
+.headerImh .desktopNavigationMenu .headerMobileMenu .burger:hover .burgerLine,
+.headerImh .desktopNavigationMenu .headerMobileMenu .burger:hover .burgerSlash {
+	background-color: var(--color-secondary);
+}
+
+.headerImh .desktopNavigationMenu .headerMobileMenu .burger:hover .burgerText {
+	color: var(--color-secondary);
+}
+
+.headerImh.onScroll .desktopNavigationMenu .headerMobileMenu .burgerLine,
+.headerImh.onScroll .desktopNavigationMenu .headerMobileMenu .burgerSlash {
+	background-color: var(--color-primary);
+}
+
+.headerImh.onScroll .desktopNavigationMenu .headerMobileMenu .burgerText {
+	color: var(--color-primary);
+}
+
+.headerImh.onScroll .desktopNavigationMenu .headerMobileMenu .burger:hover .burgerLine,
+.headerImh.onScroll .desktopNavigationMenu .headerMobileMenu  .burger:hover .burgerSlash {
+	background-color: var(--color-secondary);
+}
+
+.headerImh.onScroll .desktopNavigationMenu .headerMobileMenu .burger:hover .burgerText {
+	color: var(--color-secondary);
+}
+
+.headerImh .desktopNavigationMenu .headerImhMainPrimaryMenu {
+	display: flex;
+	justify-content: flex-end;
+}
+
+@media screen and (min-width: 1300px) {
+	.headerImh.onScroll .desktopNavigationMenu .headerImhMainPrimaryMenu {
+		margin: 0 0 8px 0;
+	}
+}
+
+.headerImh .desktopNavigationMenu .mainMenu {
+	display: none;
+}
+
+@media screen and (min-width: 1300px) {
+	.headerImh .desktopNavigationMenu .mainMenu {
+		display: block;
+	}
+}
+
+.headerImh .desktopNavigationMenu .mainMenu ul {
+	display: flex;
+}
+
+.headerImh .desktopNavigationMenu .mainMenu li {
+	font-family: var(--font-primary);
+	font-size: var(--font-size-small);
+	margin: 0 43px 0 0;
+}
+
+.headerImh .desktopNavigationMenu .mainMenu li:last-child {
+	margin: 0;
+}
+
+.headerImh .desktopNavigationMenu .mainMenu a {
+	font-weight: 600;
+	color: var(--color-white);	
+}
+
+.headerImh .desktopNavigationMenu .mainMenu a * {
+	transition: none;
+}
+
+.headerImh .desktopNavigationMenu .mainMenu a:hover {
+	color: var(--color-secondary);
+}
+
+.headerImh.onScroll .desktopNavigationMenu .mainMenu .blockContents > ul > li > a {
+	color: var(--color-primary);
+}
+
+.headerImh.onScroll .desktopNavigationMenu .mainMenu .blockContents > ul > li > a:hover {
+	color: var(--color-secondary);
+}
+
+@media screen and (min-width: 1300px) {
+	.headerImh .desktopNavigationMenu .headerMobileMenu {
+		display: none;
+	}
+}
+
+/*HEADER MOBILE (OPENED)*/
+.headerImh .mobileNavigationMenu {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+	opacity: 0;
+  visibility: hidden;
+	overflow-y: auto;
+	transition: var(--transition);
+	background-color: var(--color-primary);
+}
+
+.headerImh .mobileNavigationMenu .headerWrap {
+	padding: 0 20px;
+	max-width: 1460px;
+	box-sizing: content-box;
+	margin: 0 auto;
+}
+
+
+@media screen and (min-width: 991px) {
+	.headerImh .mobileNavigationMenu .headerWrap {
+		padding: 0 40px;
+	}
+}
+
+
+@media screen and (min-width: 1300px) {
+	.headerImh .mobileNavigationMenu .headerWrap {
+		padding: 0 60px;
+	}
+}
+
+.headerImh .mobileNavigationMenu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.headerImh .mobileNavigationMenuHeader .burger .burgerLine,
+.headerImh .mobileNavigationMenuHeader .burger .burgerSlash {
+  background-color: var(--color-white);
+}
+
+.headerImh .mobileNavigationMenuHeader .burger:hover .burgerLine,
+.headerImh .mobileNavigationMenuHeader .burger:hover .burgerSlash {
+  background-color: var(--color-secondary);
+}
+
+.headerImh .mobileNavigationMenuHeader {
+	margin: 8px 0 0 0;
+  height: 88px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+@media screen and (min-width: 991px) {
+  .headerImh .mobileNavigationMenuHeader {
+    height: 115px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .headerImh .mobileNavigationMenuHeader {
+    height: 150px;
+  }
+}
+
+.headerImh.onScroll .mobileNavigationMenuHeader {
+  height: 83px;
+}
+
+@media screen and (min-width: 991px) {
+  .headerImh.onScroll .mobileNavigationMenuHeader {
+    height: 100px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .headerImh.onScroll .mobileNavigationMenuHeader {
+    height: 125px;
+  }
+}
+
+/*MOBILE NAVIGATION MENU SEARCH AND CALL TO ACTION BUTTONS*/
+.headerImh .mobileNavigationMenu .actionBtnsAndSearch {
+	display: flex;
+	align-items: center;
+	margin: 0 0 40px 0;
+	position: relative;
+
+}
+
+.headerImh .mobileNavigationMenu .actionBtnsAndSearch > *:not(:last-child) {
+  margin: 0 15px 0 0;
+}
+
+.headerImh .mobileNavigationMenu .searchBtn {
+	color: var(--color-white);
+} 
+
+.headerImh .mobileNavigationMenu .searchBtn:hover {
+	color: var(--color-secondary);
+}
+
+.headerImh .mobileNavigationMenu .searchBtn * {
+	transition: none;
+}
+
+.headerImh .searchBarImh {
+  position: absolute;
+  width: 100%;
+  max-width: 600px;
+  padding: 15px 20px;
+  margin: 0 auto;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.headerImh .mobileNavigationMenu .searchBarImh {
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.headerImh.search-bar-mobile-open .mobileNavigationMenu .searchBarImh {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate(-50%, 30px);
+          transform: translate(-50%, 30px);
+  z-index: 3;
+}
+
+/*MOBILE NAVIGATION MAIN MENU*/
+.headerImh .mobileNavigationMenuContent .mainMenu {
+  margin: 0 0 30px 0;
+}
+
+.headerImh .mobileNavigationMenuContent .mainMenu a {
+  color: var(--color-white);
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.headerImh .mobileNavigationMenuContent .mainMenu a:hover {
+  color: var(--color-primary);
+}
+
+.headerImh .mobileNavigationMenuContent .mainMenu a * {
+	transition: none;
+}
+
+.headerImh .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li > a {
+  font-size: var(--font-size-x-large);
+}
+
+@media screen and (min-width: 425px) {
+  .headerImh .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li > a {
+    font-size: var(--font-size-xx-large);
+  } 
+}
+
+.headerImh .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background-color: var(--color-secondary);
+}
+
+.headerImh .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li  ul li {
+  padding: 0 0 10px 0;
+}
+
+.headerImh .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li  ul li:last-child {
+  padding: 0;
+}
+
+.headerImh .mobileNavigationMenuContent .mainMenu a:hover {
+  color: var(--color-secondary);
+}
+
+.headerImh .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li  ul a {
+  font-size: var(--font-size-medium);
+}
+.headerImh .mobileNavigationMenuContent .mainMenu > .Menu li.has-children > a .expandCollapseBtn {
+  position: relative;
+  width: 21px;
+  height: 21px;
+}
+
+.headerImh .mobileNavigationMenuContent .mainMenu > .Menu li.has-children > a img[alt="Collapse Icon"] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.headerImh .mobileNavigationMenuContent .mainMenu > .Menu li.has-children > a img[alt="Expand Icon"] {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.headerImh .mobileNavigationMenuContent .mainMenu > .Menu li.has-children.active > a img[alt="Collapse Icon"] {
+  opacity: 1;
+}
+
+.headerImh .mobileNavigationMenuContent .mainMenu > .Menu li.has-children.active > a img[alt="Expand Icon"] {
+  opacity: 0;
+}
+
+.headerImh .mobileNavigationMenuContent .mainMenu > .Menu li.has-children > ul {
+  position: relative;
+  visibility: hidden;
+  height: 0;
+  padding: 0;
+  -webkit-transition: height 0.3s ease-out, visibility 0s ease-out;
+  transition: height 0.3s ease-out, visibility 0s ease-out;
+  opacity: 0;
+}
+
+.headerImh .mobileNavigationMenuContent .mainMenu > .Menu li.has-children.active > ul {
+  padding: 10px 15px;
+  height: initial;
+  visibility: visible;
+  opacity: 1;
 }
 /*!
  |-----------------------------------------------------------------------------------------
  |
  |
- | Footer Imh - End
+ | Header Imh - End
  |
  |
  |-----------------------------------------------------------------------------------------
 */
 </style>
-<div class="footerImh">
-	<div class="contentAreaWrap">
-		<div class="container">
-			<div class="footerImhWrap">
-				<div class="column">
-					<section class="logo">
-						<a href="/" title="Home">
-							<img src="/images/logo/imh-logo.svg" alt="IMH Logo"/>
-						</a>
-					</section>
-					<section class="companyDescription">
-						<mwWidget rel="description" info="Company Description" widget="Content" global="1"/>
-					</section>
-					<section class="contactUs">
-						<mwWidget rel="contactUsButton" info="Button" widget="Button" global="1" link_text="Contact Us" template="rectangle.rectangle_blue_dark.php" button_size="small" align="mwBtnLeft"/>
-					</section>
-				</div>
-				<div class="column">
-					<section class="footerMenu primaryMenu">
-						<mwWidget rel="primaryFooterMenu" info="Secondary Footer Menu" widget="Menu" global="1" menu="footerPrimaryMenu" template="default.php"/>
-					</section>
-				</div>
-				<div class="column">
-					<section class="footerMenu secondaryMenu">
-						<mwWidget rel="secondaryFooterMenu" info="Secondary Footer Menu" widget="Menu" global="1" menu="footerSecondaryMenu" template="default.php"/>
-					</section>
-				</div>
-				<div class="column">
-					<section class="newsLetter">
-						<mwWidget rel="footerNewsletter" info="Footer Newsletter" widget="Contact" listid="25" global="1"/>
-					</section>
-					<section class="footerSocial">
-						<div class="footerSocialWrap">
-							<h5 class="footerSocialTitle">Follow Us</h5>
-							<mwWidget rel="soclinks" widget="Gensoclinks"  icon_size="small" align="right" global="1" socials="facebook,linkedin, twitter, googleplus" template="default.php" />
+<div class="headerImh">
+	<section class="desktopNavigationMenu">
+		<div class="headerWrap">
+			<!-- Header Secondary Menu Bar Bar -->
+			<div class="headerImhLogo">
+				<a href="/">
+					<img src="/images/logo.svg" alt="IMH" class="logoWhite" />
+					<img src="/images/logo_blue.svg" alt="IMH" class="logoBlue" />
+				</a>
+			</div>
+			<!--Header IMH Main-->
+			<div class="headerImhMain">
+				<section class="headerImhMainSecondaryMenu">
+					<nav class="utilityBarMenu">
+						<mwWidget rel="utilityBarMenu" info="Utility Bar Menu" widget="Menu" menu="utilityMenu" template="default.php" global="1"></mwWidget>
+					</nav>
+					<!-- Header Search -->
+					<div class="headerSearch">
+						<button class="searchBtn" aria-label="Open search bar"><i class="fas fa-search"></i></button>
+						<div class="headerSearchBar">
+							<div class="searchBarImh">
+								<div class="searchBarImhBackground"></div>
+								<div class="searchBarImhWrap">
+									<div class="searchBarImhForm">
+										<form action="/search" method="GET">
+											<input type="text" name="q" value="" placeholder="Search">
+											<button type="submit">
+												<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+													xmlns:xlink="http://www.w3.org/1999/xlink">
+													<title>Search Icon</title>
+													<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g id="Group" fill="currentColor" fill-rule="nonzero">
+															<path
+																d="M21.693,20.458 L15.735,14.497 C18.5088713,11.0580106 18.1058743,6.04952756 14.8178275,3.09829765 C11.5297806,0.147067736 6.50702037,0.285590583 3.38663193,3.41355891 C0.266243492,6.54152725 0.13990727,11.5646088 3.09910596,14.8454857 C6.05830464,18.1263626 11.0677507,18.5172068 14.5,15.735 L20.458,21.697 C20.6759851,21.9291214 21.003064,22.0241419 21.3114897,21.9449495 C21.6199153,21.8657571 21.8607571,21.6249153 21.9399495,21.3164897 C22.0191419,21.008064 21.9241214,20.6809851 21.692,20.463 L21.693,20.458 Z M9.293,15.8380001 C6.64484434,15.8384038 4.25731253,14.243237 3.24409462,11.7965826 C2.23087672,9.34992811 2.79159486,6.53382083 4.664696,4.66186444 C6.53779713,2.78990806 9.35424668,2.23091162 11.8002813,3.24562507 C14.2463159,4.26033853 15.8400227,6.64884508 15.8380019,9.297 C15.8313882,12.9087039 12.9037079,15.834148 9.292,15.8380001 L9.293,15.8380001 Z"
+																id="Path_1636"></path>
+														</g>
+													</g>
+												</svg>
+											</button>
+										</form>
+									</div>
+								</div>
+							</div>
 						</div>
-					</section>
+					</div>
+					<!-- Header Buttons -->
+					<div class="headerBtns">
+						<div class="headerBtn">
+							<mwWidget rel="headerButton1" info="Header Button 1" widget="Button" link_text="Contact" template="rectangle.rectangle_gray.php" button_size="medium" align="mwBtnCenter" global="1"></mwWidget>
+						</div>
+						<div class="headerBtn">
+							<mwWidget rel="headerButton2" info="Header Button 2" widget="Button" link_text="Donate" template="rectangle.rectangle_default.php" button_size="medium" align="mwBtnCenter" global="1"></mwWidget>
+						</div>
+					</div>
+					<!-- Header Mobile Menu -->
+					<div class="headerMobileMenu">
+						<button class="burger burgerOne" aria-label="Open mobile menu">
+							<span class="burgerLines">
+								<span class="burgerLine"></span> 
+								<span class="burgerLine"></span> 
+								<span class="burgerLine"></span> 
+								<span class="burgerLine"></span> 
+								<span class="burgerLine"></span> 
+								<span class="burgerLine"></span> 
+							</span> 
+							<span class="burgerSlashes">
+								<span class="burgerSlash"></span> 
+								<span class="burgerSlash"></span> 
+								<span class="burgerSlash"></span> 
+								<span class="burgerSlash"></span> 
+							</span> 
+							<span class="burgerText">
+								<span class="textOpen" aria-hidden="true">Menu</span> 
+								<span class="textClose" aria-hidden="true">Close</span> 
+							</span>
+						</button>
+					</div>
+				</section>
+				<section class="headerImhMainPrimaryMenu">
+					<!-- Menu -->
+					<div class="mainMenu">
+						<mwWidget rel="siteMenu" info="Main Menu" widget="Menu" menu="mainMenu" template="default.php" global="1"> </mwWidget>
+					</div>
+				</section>
+			</div>
+		</div>
+	</section>
+	<section class="mobileNavigationMenu">
+		<div class="headerWrap">
+			<div class="mobileNavigationMenuHeader">
+				<div class="headerMobileMenu">
+					<button id="burger-close" class="burger burgerOne" aria-label="Close mobile menu">
+						<span class="burgerLines">
+							<span class="burgerLine"></span>
+							<span class="burgerLine"></span>
+							<span class="burgerLine"></span>
+							<span class="burgerLine"></span>
+							<span class="burgerLine"></span>
+							<span class="burgerLine"></span>
+						</span>
+						<span class="burgerSlashes">
+							<span class="burgerSlash"></span>
+							<span class="burgerSlash"></span>
+							<span class="burgerSlash"></span>
+							<span class="burgerSlash"></span>
+						</span>
+					</button>
+				</div>
+			</div>
+			<div class="mobileNavigationMenuContent">
+				<div class="actionBtnsAndSearch">
+					<!-- Search Bar -->
+					<div class="headerSearchBar">
+						<button class="searchBtn" aria-label="Open search bar">
+							<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink">
+								<title>Search Icon</title>
+								<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+									<g id="Group" fill="currentColor" fill-rule="nonzero">
+										<path
+											d="M21.693,20.458 L15.735,14.497 C18.5088713,11.0580106 18.1058743,6.04952756 14.8178275,3.09829765 C11.5297806,0.147067736 6.50702037,0.285590583 3.38663193,3.41355891 C0.266243492,6.54152725 0.13990727,11.5646088 3.09910596,14.8454857 C6.05830464,18.1263626 11.0677507,18.5172068 14.5,15.735 L20.458,21.697 C20.6759851,21.9291214 21.003064,22.0241419 21.3114897,21.9449495 C21.6199153,21.8657571 21.8607571,21.6249153 21.9399495,21.3164897 C22.0191419,21.008064 21.9241214,20.6809851 21.692,20.463 L21.693,20.458 Z M9.293,15.8380001 C6.64484434,15.8384038 4.25731253,14.243237 3.24409462,11.7965826 C2.23087672,9.34992811 2.79159486,6.53382083 4.664696,4.66186444 C6.53779713,2.78990806 9.35424668,2.23091162 11.8002813,3.24562507 C14.2463159,4.26033853 15.8400227,6.64884508 15.8380019,9.297 C15.8313882,12.9087039 12.9037079,15.834148 9.292,15.8380001 L9.293,15.8380001 Z"
+											id="Path_1636"></path>
+									</g>
+								</g>
+							</svg>
+						</button>
+						<div class="searchBarImh">
+							<div class="searchBarImhBackground"></div>
+							<div class="searchBarImhWrap">
+								<div class="searchBarImhForm">
+									<form action="/search" method="GET">
+										<input type="text" name="q" value="" placeholder="Search">
+										<button type="submit">
+											<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+												xmlns:xlink="http://www.w3.org/1999/xlink">
+												<title>Search Icon</title>
+												<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+													<g id="Group" fill="currentColor" fill-rule="nonzero">
+														<path
+															d="M21.693,20.458 L15.735,14.497 C18.5088713,11.0580106 18.1058743,6.04952756 14.8178275,3.09829765 C11.5297806,0.147067736 6.50702037,0.285590583 3.38663193,3.41355891 C0.266243492,6.54152725 0.13990727,11.5646088 3.09910596,14.8454857 C6.05830464,18.1263626 11.0677507,18.5172068 14.5,15.735 L20.458,21.697 C20.6759851,21.9291214 21.003064,22.0241419 21.3114897,21.9449495 C21.6199153,21.8657571 21.8607571,21.6249153 21.9399495,21.3164897 C22.0191419,21.008064 21.9241214,20.6809851 21.692,20.463 L21.693,20.458 Z M9.293,15.8380001 C6.64484434,15.8384038 4.25731253,14.243237 3.24409462,11.7965826 C2.23087672,9.34992811 2.79159486,6.53382083 4.664696,4.66186444 C6.53779713,2.78990806 9.35424668,2.23091162 11.8002813,3.24562507 C14.2463159,4.26033853 15.8400227,6.64884508 15.8380019,9.297 C15.8313882,12.9087039 12.9037079,15.834148 9.292,15.8380001 L9.293,15.8380001 Z"
+															id="Path_1636"></path>
+													</g>
+												</g>
+											</svg>
+										</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="button1">
+						<mwWidget rel="cta1" info="Button 1" widget="Button" link_text="Need a Doctor?" button_size="medium" template="rectangle.rectangle_white.php" global="1"/>
+					</div>
+					<div class="button2">
+						<mwWidget rel="cta2" info="Button 2" widget="Button" link_text="Donate Today" button_size="medium" template="rectangle.rectangle_orange.php" global="1"/>
+					</div>
+				</div>
+				<div class="mainMenu">
+					<mwWidget rel="siteMenu" info="Main Menu" widget="Menu" menu="mainMenu" template="default.php" />
+				</div>
+				<div class="mainMenu">
+					<mwWidget rel="utilityBarMenu" info="Utility Menu" widget="Menu" menu="utilityMenu" template="default.php" />
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 </div>
+<script type="text/javascript">
+$(document).ready(function() {
+	//-----------------------------------------------------------
+	// add "onscroll" class if not at top
+	//-----------------------------------------------------------
+	//
+	(function() {
+		const $header = $(".headerImh");
+		console.log("I am here");
+		$(window).scroll(function() {
+			const $height = $(window).scrollTop();
+			console.log($height);
+			if ($height !== 0) {
+				$header.addClass("onScroll");
+			} else {
+				$header.removeClass("onScroll");
+			}
+		})
+	})();
+	//-----------------------------------------------------------
+	// Burger & Sidr
+	//-----------------------------------------------------------
+	//
+	(function () {
+		const body = $("body");
+		const burger = $(".headerImh .burger");
+		const mobileNavigationMenu = $(".headerImh .mobileNavigationMenu");
+
+		var $burger = burger.click(function () {
+			burger.each(function () {
+				$(this).toggleClass('open');
+			});
+			body.toggleClass('mobileMenuOpened');
+			mobileNavigationMenu.toggleClass('open');
+		});
+	})();
+	//-----------------------------------------------------------
+	// Toggle Search
+	//-----------------------------------------------------------
+	//
+	(function () {
+		var $searchBtnDesktop = $('.headerImh  .desktopNavigationMenu .searchBtn');
+		var $searchBarDesktop = $('.headerImh  .desktopNavigationMenu .searchBarImh');
+		var $searchBarInputDesktop = $('.headerImh  .desktopNavigationMenu .searchBarImh input[name="q"]');
+
+		var $searchBtnMobile = $('.headerImh  .mobileNavigationMenu .searchBtn');
+		var $searchBarMobile = $('.headerImh  .mobileNavigationMenu .searchBarImh');
+		var $searchBarInputMobile = $('.headerImh  .mobileNavigationMenu .searchBarImh input[name="q"]');
+
+		$searchBtnDesktop.on('click', function (e) {
+			e.preventDefault();
+
+			$('.headerImh ').toggleClass('search-bar-desktop-open');
+
+			if ($searchBarDesktop.hasClass('active')) {
+				$searchBtnDesktop.removeClass("active");
+				$searchBarDesktop.removeClass("active");
+				$searchBarInputDesktop.blur();
+			} else {
+				$searchBtnDesktop.addClass("active");
+				$searchBarDesktop.addClass("active");
+				$searchBarInputDesktop.focus();
+			}
+		});
+
+		$searchBtnMobile.on('click', function (e) {
+			e.preventDefault();
+
+			$('.headerImh ').toggleClass('search-bar-mobile-open');
+
+			if ($searchBarMobile.hasClass('active')) {
+				$searchBtnMobile.removeClass("active");
+				$searchBarMobile.removeClass("active");
+				$searchBarInputMobile.blur();
+			} else {
+				$searchBtnMobile.addClass("active");
+				$searchBarMobile.addClass("active");
+				$searchBarInputMobile.focus();
+			}
+		});
+	})();
+});
+</script>
