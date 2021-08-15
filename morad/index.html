@@ -351,7 +351,7 @@
 	font-size: var(--font-size-small);
 }
 
-.headerImh .desktopNavigation .mainMenu .blockContents > ul > li {
+.headerImh .desktopNavigationMenu .mainMenu .blockContents > ul > li {
 	margin: 0 43px 0 0;
 }
 
@@ -381,7 +381,7 @@
 }
 
 /*SUBMENU*/
-.headerImh .desktopNavigationMenu .headerMain .headerMenu .blockContents > ul li ul {
+.headerImh .desktopNavigationMenu .mainMenu .blockContents > ul li ul {
   position: absolute;
   top: 100%;
   left: 0;
@@ -395,19 +395,19 @@
           transform: perspective(400px) rotate3d(1, 0, 0, -90deg);
 } 
 
-.headerImh .desktopNavigationMenu .headerMain .headerMenu .blockContents > ul li:hover > ul {
+.headerImh .desktopNavigationMenu .mainMenu .blockContents > ul li:hover > ul {
   -webkit-transform: perspective(400px) rotate3d(0, 0, 0, 0);
           transform: perspective(400px) rotate3d(0, 0, 0, 0);
 } 
 
-.headerImh .desktopNavigationMenu .headerMain .headerMenu .blockContents ul li ul li {
+.headerImh .desktopNavigationMenu .mainMenu .blockContents ul li ul li {
   position: relative;
   min-width: 260px;
   -webkit-transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 200ms;
   transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 200ms;
 }
 
-.headerImh .desktopNavigationMenu .headerMain .headerMenu .blockContents ul li ul li > a {
+.headerImh .desktopNavigationMenu .mainMenu .blockContents ul li ul li > a {
   display: block;
   position: relative;
   padding: 10px 25px;
@@ -416,11 +416,11 @@
   font-weight: 600;
 }
 
-.headerImh .desktopNavigationMenu .headerMain .headerMenu .blockContents ul li ul li:hover > a {
+.headerImh .desktopNavigationMenu .mainMenu .blockContents ul li ul li:hover > a {
   color: var(--color-secondary);
 }
 
-.headerImh .desktopNavigationMenu .headerMain .headerMenu .blockContents ul li ul li.has-children > a:after {
+.headerImh .desktopNavigationMenu .mainMenu .blockContents ul li ul li.has-children > a:after {
   content: "\F0DA";
   position: absolute;
   margin: 0;
@@ -695,7 +695,6 @@
 .headerImh .mobileNavigationMenu .mainMenu > .Menu > .blockContents > ul > li  ul a {
   font-size: var(--font-size-large);
 }
-
 /*!
  |-----------------------------------------------------------------------------------------
  |
@@ -705,6 +704,7 @@
  |
  |-----------------------------------------------------------------------------------------
 */
+
 </style>
 <div class="headerImh">
 	<section class="desktopNavigationMenu">
