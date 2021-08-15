@@ -278,6 +278,7 @@
 	}
 }
 
+/*BURGER MENU*/
 .headerImh .desktopNavigationMenu .headerMobileMenu {
 	display: flex;
 	align-items: center;
@@ -330,6 +331,7 @@
 	}
 }
 
+/*PRIMARY MENU*/
 .headerImh .desktopNavigationMenu .mainMenu {
 	display: none;
 }
@@ -376,6 +378,56 @@
 
 .headerImh.onScroll .desktopNavigationMenu .mainMenu .blockContents > ul > li > a:hover {
 	color: var(--color-secondary);
+}
+
+/*SUBMENU*/
+.headerImh .desktopNavigationMenu .headerMain .headerMenu .blockContents > ul li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 10px 0;
+  background-color: var(--color-primary);
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  -webkit-transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 360ms;
+  transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 360ms;
+  -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -90deg);
+          transform: perspective(400px) rotate3d(1, 0, 0, -90deg);
+} 
+
+.headerImh .desktopNavigationMenu .headerMain .headerMenu .blockContents > ul li:hover > ul {
+  -webkit-transform: perspective(400px) rotate3d(0, 0, 0, 0);
+          transform: perspective(400px) rotate3d(0, 0, 0, 0);
+} 
+
+.headerImh .desktopNavigationMenu .headerMain .headerMenu .blockContents ul li ul li {
+  position: relative;
+  min-width: 260px;
+  -webkit-transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 200ms;
+  transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 200ms;
+}
+
+.headerImh .desktopNavigationMenu .headerMain .headerMenu .blockContents ul li ul li > a {
+  display: block;
+  position: relative;
+  padding: 10px 25px;
+  color: var(--color-white);
+  white-space: inherit;
+  font-weight: 600;
+}
+
+.headerImh .desktopNavigationMenu .headerMain .headerMenu .blockContents ul li ul li:hover > a {
+  color: var(--color-secondary);
+}
+
+.headerImh .desktopNavigationMenu .headerMain .headerMenu .blockContents ul li ul li.has-children > a:after {
+  content: "\F0DA";
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 @media screen and (min-width: 1300px) {
