@@ -325,12 +325,6 @@
 	justify-content: flex-end;
 }
 
-@media screen and (min-width: 1300px) {
-	.headerImh.onScroll .desktopNavigationMenu .headerImhMainPrimaryMenu {
-		margin: 0 0 8px 0;
-	}
-}
-
 /*PRIMARY MENU*/
 .headerImh .desktopNavigationMenu .mainMenu {
 	display: none;
@@ -353,6 +347,12 @@
 
 .headerImh .desktopNavigationMenu .mainMenu .blockContents > ul > li {
 	margin: 0 43px 0 0;
+}
+
+@media screen and (min-width: 1300px) {
+	.headerImh .desktopNavigationMenu .mainMenu .blockContents > ul > li {
+		padding: 0 0 8px 0;
+	}
 }
 
 .headerImh .desktopNavigationMenu .mainMenu li:last-child {
@@ -985,6 +985,40 @@ $(document).ready(function() {
 				$searchBtnMobile.addClass("active");
 				$searchBarMobile.addClass("active");
 				$searchBarInputMobile.focus();
+			}
+		});
+	})();
+	//-----------------------------------------------------------
+	// mobile menu accordion
+	//-----------------------------------------------------------
+	//
+	(function () {
+		const hasChildrenLi = $(".headerOahu .mobileNavigationMenu li.has-children");
+
+		hasChildrenLi.each(function() {
+			const hasChildrenLiItem = this;
+			const hasChildrenLink = this.querySelector("a");
+			const link = hasChildrenLink.href;
+			hasChildrenLink.href = "javascript:void(0);";
+
+			const plusBtn = document.createElement("button");
+			plusBtn.className = "expandCollapseBtn";
+
+			const imgPlus = document.createElement("img");
+			imgPlus.src = "/images/icons/plus-white.svg";
+			imgPlus.alt = "Expand Icon";
+
+			const imgMinus = document.createElement("img");
+			imgMinus.src = "/images/icons/minus-white.svg";
+			imgMinus.alt = "Collapse Icon"
+
+			plusBtn.appendChild(imgPlus);
+			plusBtn.appendChild(imgMinus);
+			hasChildrenLink.append(plusBtn);
+
+			hasChildrenLink.onclick = function(e) {
+				e.stopPropagation();
+				hasChildrenLiItem.classList.toggle("active");
 			}
 		});
 	})();
