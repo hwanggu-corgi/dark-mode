@@ -720,7 +720,7 @@
 }
 
 .headerImh .mobileNavigationMenuContent .mainMenu > .Menu li.has-children.active > ul {
-  padding: 10px 15px;
+  padding: 10px 0 10px 15px;
   height: initial;
   visibility: visible;
   opacity: 1;
@@ -738,7 +738,6 @@
  |
  |-----------------------------------------------------------------------------------------
 */
-
 </style>
 <div class="headerImh">
 	<section class="desktopNavigationMenu">
@@ -993,7 +992,7 @@ $(document).ready(function() {
 	//-----------------------------------------------------------
 	//
 	(function () {
-		const hasChildrenLi = $(".headerOahu .mobileNavigationMenu li.has-children");
+		const hasChildrenLi = $(".headerImh .mobileNavigationMenu li.has-children");
 
 		hasChildrenLi.each(function() {
 			const hasChildrenLiItem = this;
