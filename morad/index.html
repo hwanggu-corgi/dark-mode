@@ -1,33 +1,279 @@
 <style>
-.layoutWithTreeAndCurveIMH {
-	position: relative;
+/*!
+ |-----------------------------------------------------------------------------------------
+ |
+ |
+ | Footer Imh - Start
+ |
+ |
+ |-----------------------------------------------------------------------------------------
+*/
+.footerImh {
+	padding: 110px 0;
+	background-color: var(--color-primary);
+	color: var(--color-white);
 }
 
-.layoutWithTreeAndCurveIMH .contentAreaWrap {
-	min-height: 390px;
+.footerImh a {
+	color: var(--color-white);
+}
+
+.footerImh .footerImhWrap {
+	display: grid;
+	column-gap: 60px;
+	row-gap: 30px;
+}
+
+@media screen and (min-width: 767px) {
+	.footerImh .footerImhWrap {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.footerImh .footerImhWrap {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+.footerImh .column:not(:first-child)::before {
+	content: "";
+	display: block;
+	height: 1px;
+	width: 100%;
+	background-color: var(--color-primary-x-lightened);
+	margin: 0 0 21px 0;
+}
+
+.footerImh section {
+	margin: 0 0 30px 0;
+}
+
+.footerImh section:last-child {
+	margin: 0;
+}
+
+.footerImh .Content .blockContents *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+	font-size: var(--font-size-small);
+	font-family: var(--font-secondary);
+}
+
+.footerImh .footerMenu a {
+	font-family: var(--font-secondary);
+	display: block;
+}
+
+.footerImh .primaryMenu li {
+	margin: 0 0 15px 0;
+}
+
+.footerImh .primaryMenu li:last-child {
+	margin: 0;
+}
+
+
+.footerImh .primaryMenu a {
+	font-weight: normal;
+}
+
+.footerImh .primaryMenu a:hover {
+	font-weight: bold;
+}
+
+.footerImh .secondaryMenu li::after {
+	content: "";
+	display: block;
+	height: 1px;
+	width: 100%;
+	background-color: var(--color-primary-x-lightened);
+}
+
+.footerImh .secondaryMenu li:last-child::after {
+	content: none;
+}
+
+.footerImh .secondaryMenu li:first-child a {
+	padding: 0 0 18px 0;
+}
+
+.footerImh .secondaryMenu a {
+	padding: 20px 0 18px 0;
+}
+
+.footerImh .secondaryMenu a:hover {
+	color: var(--color-secondary);
+}
+
+.footerImh .secondaryMenu a * {
+	transition: none;
+}
+
+/*NEWSLETTER*/
+.footerImh .Dialog {
+	width: 100%;
+}
+
+.footerImh .Dialog .Caption {
+	margin: 0 0 15px 0;
+}
+
+.footerImh .mwInput.checkbox {
+	background-color: transparent;
+	color: white;
+}
+
+.footerImh .mwInput.checkbox:not(:last-child) {
+	margin: 0 0 11px 0;
+}
+
+.footerImh .mwInput.checkbox:last-child {
+	margin: 0 0 15px 0;
+}
+
+.footerImh .mwInput.checkbox div {
+	font-family: var(--font-secondary);
+}
+
+.footerImh .mwInput.text {
+	margin: 0 0 8px 0;
+	border: 1px solid var(--color-white);
+	padding: 0;
+}
+
+.footerImh .mwInput.text input {
+	padding: 10px 16px;
+	line-height: initial;
+	color: var(--color-black);
+}
+
+.footerImh .mwInput.text input::placeholder {
+	color: var(--color-black);
+}
+
+.footerImh .mwInput.text input::placeholder {
+	color: var(--color-black);
+}
+
+.footerImh .btn p > button {
+	padding: 10px 28px;
+	width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+	.footerImh .btn p > button {
+		width: initial;
+	}	
+}
+
+/*SOCIALS*/
+.footerImh .footerSocialWrap {
 	display: flex;
 	align-items: center;
 }
 
-.layoutWithTreeAndCurveIMH .bannerCurve {
-	position: absolute;
-	top: 0;
-	left: 0;
-	transform: translate(0, calc(-100% + 1px));
+.footerImh .footerSocialTitle {
+	font-size: var(--font-size-medium);
+	font-family: var(--font-secondary);
+	margin: 0 15px 0 0;
+	text-align: center;
 }
 
-.layoutWithTreeAndCurveIMH .tree {
-	position: absolute;
-	bottom: -127.5px;
-	right: -150px;
+@media screen and (min-width: 767px) {
+	.footerImh .footerSocialTitle {
+		text-align: left;
+	}
 }
+
+.footerImh .Gensoclinks {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.footerImh .snsLink {
+	text-align: center;
+}
+
+@media screen and (min-width: 767px) {
+	.footerImh .snsLink {
+		text-align: right;
+	}
+}
+
+.footerImh .footerSocial::before {
+	content: "";
+	display: block;
+	height: 1px;
+	width: 100%;
+	background-color: var(--color-primary-x-lightened);
+	margin: 0 0 21px 0;
+}
+
+.footerImh .footerSocial a {
+	margin: 0 10px 0 0;
+}
+
+.footerImh .footerSocial a:hover {
+	color: var(--color-secondary);
+}
+
+.footerImh .footerSocial a:last-child {
+	margin: 0;
+}
+
+.footerImh .footerSocial a * {
+	transition: none;
+}
+/*!
+ |-----------------------------------------------------------------------------------------
+ |
+ |
+ | Footer Imh - End
+ |
+ |
+ |-----------------------------------------------------------------------------------------
+*/
 </style>
-<div class="layoutWithTreeAndCurveIMH contentAreaTall content-style">
-	<img class="tree" src="/images/tree.svg"/>
-	<img class="bannerCurve" src="/images/bannerCurve.svg" alt="Banner Curve"/>
+<div class="footerImh">
 	<div class="contentAreaWrap">
 		<div class="container">
-			<mwPageArea rel="mainContent" info="Default Content Area Tall" sortable="page"></mwPageArea>
+			<div class="footerImhWrap">
+				<div class="column">
+					<section class="logo">
+						<a href="/" title="Home">
+							<img src="/images/logo/imh-logo.svg" alt="IMH Logo"/>
+						</a>
+					</section>
+					<section class="companyDescription">
+						<mwWidget rel="description" info="Company Description" widget="Content" global="1"/>
+					</section>
+					<section class="contactUs">
+						<mwWidget rel="contactUsButton" info="Button" widget="Button" global="1" link_text="Contact Us" template="rectangle.rectangle_blue_dark.php" button_size="small" align="mwBtnLeft"/>
+					</section>
+				</div>
+				<div class="column">
+					<section class="footerMenu primaryMenu">
+						<mwWidget rel="primaryFooterMenu" info="Secondary Footer Menu" widget="Menu" global="1" menu="footerPrimaryMenu" template="default.php"/>
+					</section>
+				</div>
+				<div class="column">
+					<section class="footerMenu secondaryMenu">
+						<mwWidget rel="secondaryFooterMenu" info="Secondary Footer Menu" widget="Menu" global="1" menu="footerSecondaryMenu" template="default.php"/>
+					</section>
+				</div>
+				<div class="column">
+					<section class="newsLetter">
+						<mwWidget rel="footerNewsletter" info="Footer Newsletter" widget="Contact" listid="25" global="1"/>
+					</section>
+					<section class="footerSocial">
+						<div class="footerSocialWrap">
+							<h5 class="footerSocialTitle">Follow Us</h5>
+							<mwWidget rel="soclinks" widget="Gensoclinks"  icon_size="small" align="right" global="1" socials="facebook,linkedin, twitter, googleplus" template="default.php" />
+						</div>
+					</section>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
