@@ -994,7 +994,8 @@
 	
 			hasChildrenLi.each(function() {
 				const hasChildrenLiItem = this;
-				const hasChildrenLink = this.querySelector("a");
+				const hasChildrenLink = $(this).find("a").first();
+				console.log(hasChildrenLink);
 	
 				const plusBtn = document.createElement("button");
 				plusBtn.className = "expandCollapseBtn";
