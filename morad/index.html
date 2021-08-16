@@ -467,10 +467,18 @@
 }
 
 
+.headerImh .desktopNavigationMenu .mainMenu .blockContents > ul > li:nth-last-child(2) ul li ul,
 .headerImh .desktopNavigationMenu .mainMenu .blockContents > ul > li:last-child ul li ul {
 	transform-origin: right;
 	transform: perspective(400px) rotate3d(0, 1, 0, -90deg);
+	left: -100%;
 }
+
+.headerImh .desktopNavigationMenu .mainMenu .blockContents > ul > li:nth-last-child(2) ul li:hover ul,
+.headerImh .desktopNavigationMenu .mainMenu .blockContents > ul > li:last-child ul li:hover ul {
+  -webkit-transform: perspective(400px) rotate3d(0, 0, 0, 0);
+          transform: perspective(400px) rotate3d(0, 0, 0, 0);
+} 
 
 .headerImh .desktopNavigationMenu .mainMenu .blockContents ul li ul li:first-child ul {
 	top: -10px;
