@@ -347,6 +347,7 @@
 
 .headerImh .desktopNavigationMenu .mainMenu .blockContents > ul > li {
 	margin: 0 43px 0 0;
+	position: relative;
 }
 
 @media screen and (min-width: 1300px) {
@@ -391,6 +392,11 @@
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
+}
+
+.headerImh.onScroll .desktopNavigationMenu .mainMenu .blockContents > ul > li:last-child > ul {
+	right: 0;
+	left: initial;
 }
 
 /*SUBMENU*/
