@@ -662,11 +662,11 @@
   background-color: var(--color-secondary);
 }
 
-.headerImh .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li  ul li {
+.headerImh .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li ul li {
   padding: 0 0 10px 0;
 }
 
-.headerImh .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li  ul li:last-child {
+.headerImh .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li ul li:last-child {
   padding: 0;
 }
 
@@ -674,9 +674,15 @@
   color: var(--color-secondary);
 }
 
-.headerImh .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li  ul a {
-  font-size: var(--font-size-medium);
+.headerImh .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li ul a {
+  font-size: var(--font-size-large);
 }
+
+.headerImh .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li ul a span {
+  flex-grow: 1;
+	margin: 0 10px 0 0;
+}
+
 .headerImh .mobileNavigationMenuContent .mainMenu > .Menu li.has-children > a .expandCollapseBtn {
   position: relative;
   width: 21px;
@@ -724,10 +730,6 @@
   height: initial;
   visibility: visible;
   opacity: 1;
-}
-
-.headerImh .mobileNavigationMenu .mainMenu > .Menu > .blockContents > ul > li  ul a {
-  font-size: var(--font-size-large);
 }
 /*!
  |-----------------------------------------------------------------------------------------
@@ -994,10 +996,16 @@
 	
 			hasChildrenLi.each(function() {
 				const hasChildrenLiItem = this;
-				const hasChildrenLink = $(this).find("a").first();
-				console.log(hasChildrenLink);
+				const hasChildrenLink = this.querySelector("a");
+				const hasChildrenSpan = this.querySelector("span");
+				const link = hasChildrenLink.href;
+				hasChildrenLink.href = "javascript:void(0);";
 	
 				const plusBtn = document.createElement("button");
+				plusBtn.onclick =function(e) {
+					e.stopPropagation();
+					hasChildrenLiItem.classList.toggle("active");
+				}
 				plusBtn.className = "expandCollapseBtn";
 	
 				const imgPlus = document.createElement("img");
@@ -1012,9 +1020,10 @@
 				plusBtn.appendChild(imgMinus);
 				hasChildrenLink.append(plusBtn);
 	
-				plusBtn.onclick = function(e) {
-					e.stopPropagation();
-					hasChildrenLiItem.classList.toggle("active");
+				hasChildrenSpan.onclick = function(e) {
+					const a = document.createElement("a");
+					a.href = link;
+					a.click();
 				}
 			});
 		})();
