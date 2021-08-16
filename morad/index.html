@@ -569,12 +569,26 @@
 	align-items: center;
 	margin: 0 0 40px 0;
 	position: relative;
+	flex-direction: column;
+}
 
+@media screen and (min-width: 425px) {
+	.headerImh .mobileNavigationMenu .actionBtnsAndSearch {
+		display: flex;
+		flex-direction: row;
+	}
 }
 
 .headerImh .mobileNavigationMenu .actionBtnsAndSearch > *:not(:last-child) {
-  margin: 0 15px 0 0;
+  margin: 0 0 15px 0;
 }
+
+@media screen and (min-width: 425px) {
+	.headerImh .mobileNavigationMenu .actionBtnsAndSearch > *:not(:last-child) {
+		margin: 0 15px 0 0;
+	}
+}
+
 
 .headerImh .mobileNavigationMenu .searchBtn {
 	color: var(--color-white);
@@ -685,7 +699,7 @@
 
 .headerImh .mobileNavigationMenuContent .mainMenu > .Menu li.has-children > a .expandCollapseBtn {
   position: relative;
-  width: 21px;
+	width: 21px;
   height: 21px;
 }
 
@@ -696,13 +710,8 @@
   left: 0;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-}
-
-@media screen and (min-width: 425px) {
-	.headerImh .mobileNavigationMenuContent .mainMenu > .Menu li.has-children > a img[alt="Collapse Icon"] {
-		width: 21px;
-		height: 21px;
-	}	
+	width: 21px;
+  height: 21px;
 }
 
 .headerImh .mobileNavigationMenuContent .mainMenu > .Menu li.has-children > a img[alt="Expand Icon"] {
@@ -712,15 +721,9 @@
   left: 0;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+	width: 21px;
+  height: 21px;
 }
-
-@media screen and (min-width: 425px) {
-	.headerImh .mobileNavigationMenuContent .mainMenu > .Menu li.has-children > a img[alt="Expand Icon"] {
-		width: 21px;
-		height: 21px;
-	}	
-}
-
 
 .headerImh .mobileNavigationMenuContent .mainMenu > .Menu li.has-children.active > a img[alt="Collapse Icon"] {
   opacity: 1;
@@ -1024,11 +1027,11 @@
 				plusBtn.className = "expandCollapseBtn";
 	
 				const imgPlus = document.createElement("img");
-				imgPlus.src = "/images/icons/plus-white.svg";
+				imgPlus.src = "/images/icons/plus-white.png";
 				imgPlus.alt = "Expand Icon";
 	
 				const imgMinus = document.createElement("img");
-				imgMinus.src = "/images/icons/minus-white.svg";
+				imgMinus.src = "/images/icons/minus-white.png";
 				imgMinus.alt = "Collapse Icon"
 	
 				plusBtn.appendChild(imgPlus);
