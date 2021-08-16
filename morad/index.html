@@ -675,7 +675,7 @@
 }
 
 .headerImh .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li ul a {
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-medium);
 }
 
 .headerImh .mobileNavigationMenuContent .mainMenu > .Menu > .blockContents > ul > li ul a span {
@@ -698,6 +698,13 @@
   transition: all 0.3s ease-out;
 }
 
+@media screen and (min-width: 425px) {
+	.headerImh .mobileNavigationMenuContent .mainMenu > .Menu li.has-children > a img[alt="Collapse Icon"] {
+		width: 21px;
+		height: 21px;
+	}	
+}
+
 .headerImh .mobileNavigationMenuContent .mainMenu > .Menu li.has-children > a img[alt="Expand Icon"] {
   opacity: 1;
   position: absolute;
@@ -706,6 +713,14 @@
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
+
+@media screen and (min-width: 425px) {
+	.headerImh .mobileNavigationMenuContent .mainMenu > .Menu li.has-children > a img[alt="Expand Icon"] {
+		width: 21px;
+		height: 21px;
+	}	
+}
+
 
 .headerImh .mobileNavigationMenuContent .mainMenu > .Menu li.has-children.active > a img[alt="Collapse Icon"] {
   opacity: 1;
