@@ -566,16 +566,17 @@
 /*MOBILE NAVIGATION MENU SEARCH AND CALL TO ACTION BUTTONS*/
 .headerImh .mobileNavigationMenu .actionBtnsAndSearch {
 	display: flex;
-	align-items: center;
 	margin: 0 0 40px 0;
 	position: relative;
 	flex-direction: column;
+	align-items: flex-start;
 }
 
 @media screen and (min-width: 425px) {
 	.headerImh .mobileNavigationMenu .actionBtnsAndSearch {
 		display: flex;
 		flex-direction: row;
+		align-items: center;
 	}
 }
 
@@ -588,7 +589,6 @@
 		margin: 0 15px 0 0;
 	}
 }
-
 
 .headerImh .mobileNavigationMenu .searchBtn {
 	color: var(--color-white);
@@ -627,6 +627,30 @@
   -webkit-transform: translate(-50%, 30px);
           transform: translate(-50%, 30px);
   z-index: 3;
+}
+
+.headerImh .mobileNavigationMenu .button {
+	width: 100%;
+}
+
+@media screen and (min-width: 425px) {
+	.headerImh .mobileNavigationMenu .button {
+		width: initial;
+	}	
+}
+
+.headerImh .mobileNavigationMenu .button p > a {
+	padding: 8px 20px;
+	font-size: 12px;
+	width: 100%;
+}
+
+@media screen and (min-width: 425px) {
+	.headerImh .mobileNavigationMenu .button p > a {
+		padding: 12px 31px;
+		font-size: 16px;
+		width: initial;
+	}	
 }
 
 /*MOBILE NAVIGATION MAIN MENU*/
@@ -909,10 +933,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="button1">
+					<div class="button">
 						<mwWidget rel="cta1" info="Button 1" widget="Button" link_text="Need a Doctor?" button_size="medium" template="rectangle.rectangle_white.php" global="1"/>
 					</div>
-					<div class="button2">
+					<div class="button">
 						<mwWidget rel="cta2" info="Button 2" widget="Button" link_text="Donate Today" button_size="medium" template="rectangle.rectangle_orange.php" global="1"/>
 					</div>
 				</div>
