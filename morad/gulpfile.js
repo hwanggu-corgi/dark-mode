@@ -16,6 +16,7 @@ gulp.task('clean', () => {
     ]);
 });
 
+/*REMOTE DEPLOY*/
 
 // const gulp = require('gulp');
 const gutil = require('gutil');
@@ -27,14 +28,18 @@ function getFtpConnection(user, password){
             port: 21,
             user: user,
             password: password,
-            log: gutil.log
+            log: gutil.log,
+            secure:   true,
+            secureOptions: {
+              rejectUnauthorized: false
+            }
       });
 }
 
 gulp.task('remote-deploy', function(){
-  const localFiles = ['./css/override.css'];
+  const localFiles = ['./css/test.css'];
   const user = process.env.FTP_USER;
-  const password = process.env.FTP_PASSWORD;
+  const password = process.env.FTP_PWD;
   const remoteLocation = '/public_html';
   const conn = getFtpConnection(user, password);
   return gulp.src(localFiles, {base: '.', buffer: false})
@@ -44,7 +49,7 @@ gulp.task('remote-deploy', function(){
 
 gulp.task('watch', () => {
   gulp.watch('./css/sass/**/*.scss', (done) => {
-    gulp.series(['clean', 'styles'])(done);
+    gulp.series(['clean', 'styles', 'remote-deploy'])(done);
   });
 });
 
