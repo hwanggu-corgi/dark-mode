@@ -14,7 +14,7 @@
 }
 
 .headerCAPFSC .headerLogo {
-  position: absolute;
+  position: static;
   top: 0;
   bottom: 0;
 
@@ -24,12 +24,22 @@
     align-items: center;
     height: 100%;
     width: 150px;
-    background-color: var(--color-white);
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .headerCAPFSC .headerLogo {
+    position: absolute;
+
+    a {
+      background-color: var(--color-white);
+    }
   }
 }
 
 .headerCAPFSC .headerUtilityBar {
   background-color: var(--color-primary);
+  display: none;
 
   .headerUtilityBarWrap {
     max-width: 1280px;
@@ -48,6 +58,13 @@
     }
   }
 }
+
+@media screen and (min-width: 767px) {
+  .headerCAPFSC .headerUtilityBar {
+    display: block;
+  }
+}
+
 
 .headerCAPFSC .utilityBarMenu {
   .Menu {
