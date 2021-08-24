@@ -17,6 +17,31 @@ gulp.task('clean', () => {
 });
 
 
+// const gulp = require('gulp');
+const gutil = require('gutil');
+const ftp = require('vinyl-ftp');
+
+function getFtpConnection(user, password){
+     return ftp.create({
+            host: "capfsc.morwebcms.com",
+            port: 21,
+            user: user,
+            password: password,
+            log: gutil.log
+      });
+}
+
+gulp.task('remote-deploy', function(){
+  const localFiles = ['./css/override.css'];
+  const user = process.env.FTP_USER;
+  const password = process.env.FTP_PASSWORD;
+  const remoteLocation = '/public_html';
+  const conn = getFtpConnection(user, password);
+  return gulp.src(localFiles, {base: '.', buffer: false})
+            .pipe(conn.newer(remoteLocation))
+            .pipe(conn.dest(remoteLocation))
+})
+
 gulp.task('watch', () => {
   gulp.watch('./css/sass/**/*.scss', (done) => {
     gulp.series(['clean', 'styles'])(done);
@@ -24,29 +49,3 @@ gulp.task('watch', () => {
 });
 
 gulp.task('default', gulp.series('watch'));
-
-// const gulp = require('gulp');
-// const gutil = require('gutil');
-// const ftp = require('vinyl-ftp');
-
-// var localFiles = ['./assets/**/*'];
-
-// var user = process.env.FTP_USER;
-// var password = process.env.FTP_PASSWORD;
-// function getFtpConnection(){
-//      return ftp.create({
-//             host: "capfsc.morwebcms.com",
-//             port: 21,
-//             user: user,
-//             password: password,
-//             log: gutil.log
-//       });
-// }
-
-// const remoteLocation = '/public_html';
-// gulp.task('remote-deploy', function(){
-//      var conn = getFtpConnection();
-//      return gulp.src(localFiles, {base: '.', buffer: false})
-//                 .pipe(conn.newer(remoteLocation))
-//                 .pipe(conn.dest(remoteLocation))
-// })

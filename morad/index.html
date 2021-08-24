@@ -1,5 +1,5 @@
 <style>
-	/*!
+/*!
  |-----------------------------------------------------------------------------------------
  |
  |
@@ -220,14 +220,15 @@
     max-width: 1280px;
     padding: 0 20px; 
     margin: 0 auto;
-  }
-
-  .mainMenu {
-    flex-grow: 1;
     display: flex;
-    justify-content: flex-end;
-    height: 100%;
   }
+}
+
+.headerCAPFSC .mainMenu {
+  flex-grow: 1;
+  display: none;
+  justify-content: flex-end;
+  height: 100%;
 
   .blockContents {
     height: 100%;
@@ -273,7 +274,6 @@
     left: initial;
   }
 
-  /*SUBMENU*/
   .blockContents > ul li ul {
     margin: 0;
     position: absolute;
@@ -350,6 +350,23 @@
 
   .blockContents ul li ul li:first-child ul {
     top: -10px;      
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .headerCAPFSC .mainMenu {
+    display: flex;
+  }
+}
+
+.headerCAPFSC .headerMobileMenu {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .headerCAPFSC .headerMobileMenu {
+    display: none;
   }
 }
 /*!
