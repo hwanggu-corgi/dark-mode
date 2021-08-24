@@ -6,18 +6,24 @@ const rename = require('gulp-rename');
 gulp.task('styles', () => {
     return gulp.src('css/sass/main.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(rename('test.css'))
-        .pipe(gulp.dest('.'));
+        .pipe(rename('override.css'))
+        .pipe(gulp.dest('./css'));
 });
 
 gulp.task('clean', () => {
     return del([
-        './css/test.css',
+        './css/override.css',
     ]);
 });
 
-gulp.task('default', gulp.series(['clean', 'styles']));
 
+gulp.task('watch', () => {
+  gulp.watch('./css/sass/**/*.scss', (done) => {
+    gulp.series(['clean', 'styles'])(done);
+  });
+});
+
+gulp.task('default', gulp.series('watch'));
 
 // const gulp = require('gulp');
 // const gutil = require('gutil');
