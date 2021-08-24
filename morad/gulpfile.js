@@ -37,13 +37,13 @@ function getFtpConnection(user, password){
 }
 
 gulp.task('remote-deploy', function(){
-  const localFiles = ['./css/test.css'];
+  const localFiles = ['./css/override.css', './css/skin.css'];
   const user = process.env.FTP_USER;
   const password = process.env.FTP_PWD;
   const remoteLocation = '/public_html';
   const conn = getFtpConnection(user, password);
   return gulp.src(localFiles, {base: '.', buffer: false})
-            .pipe(conn.newer(remoteLocation))
+            .pipe(conn.newerOrDifferentSize(remoteLocation, { base: '.'}))
             .pipe(conn.dest(remoteLocation))
 })
 

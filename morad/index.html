@@ -8,15 +8,22 @@
  |
  |-----------------------------------------------------------------------------------------
 */
+header.sticky {
+  position: sticky;
+  top: 0;
+}
+
 /*Header CAPFSC*/
 .headerCAPFSC {
   position:relative;
+  box-shadow: 0 6px 10px rgb(0 0 0 / 10%);
 }
 
 .headerCAPFSC .headerLogo {
   position: static;
   top: 0;
   bottom: 0;
+  height: 100%;
 
   a {
     display: flex;
@@ -24,15 +31,26 @@
     align-items: center;
     height: 100%;
     width: 150px;
+    padding: 10px 0;
+  }
+
+  img {
+    height: 100%;
   }
 }
 
 @media screen and (min-width: 767px) {
   .headerCAPFSC .headerLogo {
     position: absolute;
+    height: initial;
 
     a {
       background-color: var(--color-white);
+      padding: 0;
+    }
+
+    img {
+      height: initial;
     }
   }
 }
@@ -348,6 +366,7 @@
   .blockContents ul li ul li:hover > a {
     color: var(--color-secondary);
   }
+  
   
   .blockContents ul li ul li.has-children > a {
     &::after {
