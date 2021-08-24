@@ -203,6 +203,7 @@
 
 .headerCAPFSC .headerPrimaryNavigation {
   background-color: var(--color-primary-xxx-lightened);
+  height: 70px;
   
   a {
     * {
@@ -218,9 +219,26 @@
 
   .headerPrimaryNavigationWrap {
     max-width: 1280px;
-    padding: 0 20px; 
+    padding: 0 20px;
     margin: 0 auto;
     display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .headerPrimaryNavigationBody {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .headerCAPFSC .headerPrimaryNavigation {
+    height: 94px;
+    .headerPrimaryNavigationWrap {
+      align-items: flex-end;
+    }
   }
 }
 
@@ -237,7 +255,6 @@
   .blockContents > ul {
     display: flex;
     height: 100%;
-    padding: 20px 0 0 0;
     margin: 0;
   }
 
